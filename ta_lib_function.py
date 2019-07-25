@@ -1,7 +1,9 @@
+import talib
+from talib import abstract
+import numpy as np
+
+
 def get_ta(arr_tuple, ta_type, factor_list, factor_name, **kwargs):
-    import talib
-    from talib import abstract
-    import numpy as np
     try:
         function_ = abstract.Function(ta_type)
         func = getattr(talib, ta_type.upper())
